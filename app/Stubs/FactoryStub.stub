@@ -1,0 +1,17 @@
+<?php
+
+namespace $NAMESPACE$;
+
+class $CLASS_NAME$Factory
+{
+
+       private $class_name;
+
+       public function __construct($type){
+           $this->class_name = "Modules\\Module_name\\Actions\\...\\" .$type;
+       }
+
+       public function executeFactory(){
+            return (new $this->class_name())->execute();
+       }
+}
