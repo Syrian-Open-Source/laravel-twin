@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace $NAMESPACE$;
+
+use Spatie\DataTransferObject\Caster;
+use Spatie\DataTransferObject\Exceptions\UnknownProperties;
+
+class  $CLASS_NAME$Caster implements Caster
+{
+
+public function cast(mixed $value): mixed
+    {
+        return $value->map(/**
+         * @throws UnknownProperties
+         */
+            function(Model $model){
+                return DtoData::fromModel($model);
+            })->toArray();
+    }
+
+}

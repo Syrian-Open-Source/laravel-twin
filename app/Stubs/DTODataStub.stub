@@ -1,0 +1,38 @@
+<?php
+
+
+namespace $NAMESPACE$;
+
+use Illuminate\Http\Request;
+use Spatie\DataTransferObject\DataTransferObject;
+
+class $CLASS_NAME$Data extends DataTransferObject
+{
+
+     /* Define All Variables Here.... */
+
+
+    /* Replace The Entity you want with 'Model' Class */
+    public static function fromModel(Model $model){
+     $data =  [];
+
+            $dto = new static($data);
+            $dto->onlyKeys = array_keys($data);
+
+            return $dto;
+
+    }
+
+
+    public static function fromRequest(Request $request){
+
+      $data = [];
+
+            $dto = new static($data);
+            $dto->onlyKeys = array_keys($data);
+
+            return $dto;
+    }
+
+
+}

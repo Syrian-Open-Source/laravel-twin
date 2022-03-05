@@ -1,0 +1,19 @@
+<?php
+
+namespace App\PolicyStructure;
+
+class $CLASS_NAME$Policy extends  IPolicy
+{
+
+        public function hasRole()
+        {
+              return true;
+        }
+
+        public function hasPermissions()
+        {
+           return true;
+        }
+}
+
+

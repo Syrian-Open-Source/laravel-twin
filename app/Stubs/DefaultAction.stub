@@ -1,0 +1,12 @@
+<?php
+
+namespace $NAMESPACE$;
+
+
+class Default$CLASS_NAME$Action extends $CLASS_NAME$Action
+{
+
+     public function execute(){
+
+     }
+}
