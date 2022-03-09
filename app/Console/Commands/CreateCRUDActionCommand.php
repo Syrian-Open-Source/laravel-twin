@@ -25,6 +25,7 @@ class CreateCRUDActionCommand extends Command
      * Create a new command instance.
      *
      * @return void
+     * @author karam mustafa, ali monther
      */
     public function __construct()
     {
@@ -34,14 +35,14 @@ class CreateCRUDActionCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {
         Artisan::call(
             '
                make:action'.' '
-
             .$this->argument('module_name').'Index'.' '
             .$this->argument('module_name').' '
         );

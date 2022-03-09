@@ -43,7 +43,8 @@ class CreateDTOCasterCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {
@@ -66,6 +67,7 @@ class CreateDTOCasterCommand extends Command
      * Return the Singular Capitalize Name
      * @param $name
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSingularClassName($name)
     {
@@ -75,6 +77,7 @@ class CreateDTOCasterCommand extends Command
     /**
      * Return the stub file path
      * @return string
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubPath()
@@ -89,6 +92,7 @@ class CreateDTOCasterCommand extends Command
      * Map the stub variables present in stub to its value
      *
      * @return array
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubVariables()
@@ -106,7 +110,8 @@ class CreateDTOCasterCommand extends Command
        /**
      * Get the stub path and the stub variables
      *
-     * @return bool|mixed|string
+        * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      *
      */
     public function getSourceFile()
@@ -120,6 +125,7 @@ class CreateDTOCasterCommand extends Command
      * @param $stub
      * @param array $stubVariables
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      */
     public function getStubContents($stub , $stubVariables = [])
     {
@@ -138,11 +144,15 @@ class CreateDTOCasterCommand extends Command
      * Get the full path of generate class
      *
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSourceFilePath()
     {
-        return base_path('Modules\\'.$this->argument('module_name').'\\DTO').'\\'.$this->argument('class_name').'DTO\\'
-            .$this->getSingularClassName($this->argument('class_name')) . 'Caster.php';
+        return base_path('Modules\\'.$this->argument('module_name').'\\DTO')
+            .'\\'.$this->argument('class_name')
+            .'DTO\\'
+            .$this->getSingularClassName($this->argument('class_name'))
+            .'Caster.php';
     }
 
     /**
@@ -150,6 +160,7 @@ class CreateDTOCasterCommand extends Command
      *
      * @param  string  $path
      * @return string
+     * @author karam mustafa, ali monther
      */
     protected function makeDirectory($path)
     {

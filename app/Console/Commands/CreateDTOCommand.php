@@ -35,13 +35,13 @@ class CreateDTOCommand extends Command
      * Execute the console command.
      *
      * @return int
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {
         Artisan::call(
             '
                make:dto-data'.' '
-
             .$this->argument('name').' '
             .$this->argument('module').' '
         );
@@ -49,7 +49,6 @@ class CreateDTOCommand extends Command
         Artisan::call(
             '
                make:dto-caster'.' '
-
             .$this->argument('name').' '
             .$this->argument('module').' '
         );

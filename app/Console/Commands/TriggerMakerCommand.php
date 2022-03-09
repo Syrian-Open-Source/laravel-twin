@@ -35,6 +35,7 @@ class TriggerMakerCommand extends Command
      * Execute the console command.
      *
      * @return int
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {

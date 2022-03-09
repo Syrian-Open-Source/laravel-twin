@@ -42,6 +42,9 @@ class PolicyCommand extends Command
 
     /**
      * Execute the console command.
+     * @return void
+     * @author karam mustafa, ali monther
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {
@@ -64,6 +67,7 @@ class PolicyCommand extends Command
      * Return the Singular Capitalize Name
      * @param $name
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSingularClassName($name)
     {
@@ -73,6 +77,7 @@ class PolicyCommand extends Command
     /**
      * Return the stub file path
      * @return string
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubPath()
@@ -86,6 +91,7 @@ class PolicyCommand extends Command
      * Map the stub variables present in stub to its value
      *
      * @return array
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubVariables()
@@ -100,6 +106,7 @@ class PolicyCommand extends Command
      * Get the stub path and the stub variables
      *
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      *
      */
     public function getSourceFile()
@@ -114,6 +121,7 @@ class PolicyCommand extends Command
      * @param $stub
      * @param array $stubVariables
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      */
     public function getStubContents($stub , $stubVariables = [])
     {
@@ -132,10 +140,12 @@ class PolicyCommand extends Command
      * Get the full path of generate class
      *
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSourceFilePath()
     {
-        return base_path('App\\PolicyStructure') .'\\'
+        return base_path('App\\PolicyStructure')
+            .'\\'
             .$this->getSingularClassName($this->argument('policy_name')) . 'Policy.php';
     }
 
@@ -144,6 +154,7 @@ class PolicyCommand extends Command
      *
      * @param  string  $path
      * @return string
+     * @author karam mustafa, ali monther
      */
     protected function makeDirectory($path)
     {
