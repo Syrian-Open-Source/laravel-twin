@@ -4,17 +4,39 @@
 namespace App\PolicyStructure;
 
 
+/**
+ * Class PolicyFactory
+ *
+ * @author karam mustafa, ali monther
+ * @package App\PolicyStructure
+ */
 class PolicyFactory
 {
 
-    private $class_name ;
+    /**
+     * class name
+     * @author karam mustafa, ali monther
+     * @var string
+     */
+    private $className ;
 
+    /**
+     * PolicyFactory constructor.
+     *
+     * @param $type
+     */
     public function __construct($type){
-        $this->class_name = "App\\PolicyStructure\\" .$type;
+        $this->className = "App\\PolicyStructure\\" .$type;
     }
 
+    /**
+     * check if this class is accessible.
+     *
+     * @return mixed
+     * @author karam mustafa, ali monther
+     */
     public  function check(){
-        $class = new $this->class_name();
+        $class = new $this->className();
         return $class->is_enabled();
     }
 }
