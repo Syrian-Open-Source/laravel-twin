@@ -40,13 +40,11 @@ class MakeDefaultActionCommand extends Command
         $this->files = $files;
     }
 
-
-
-
     /**
      * Return the Singular Capitalize Name
      * @param $name
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSingularClassName($name)
     {
@@ -56,6 +54,7 @@ class MakeDefaultActionCommand extends Command
     /**
      * Return the stub file path
      * @return string
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubPath()
@@ -69,6 +68,7 @@ class MakeDefaultActionCommand extends Command
      * Map the stub variables present in stub to its value
      *
      * @return array
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubVariables()
@@ -85,6 +85,7 @@ class MakeDefaultActionCommand extends Command
      * Get the stub path and the stub variables
      *
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      *
      */
     public function getSourceFile()
@@ -98,6 +99,7 @@ class MakeDefaultActionCommand extends Command
      * @param $stub
      * @param array $stubVariables
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      */
     public function getStubContents($stub , $stubVariables = [])
     {
@@ -116,6 +118,7 @@ class MakeDefaultActionCommand extends Command
      * Get the full path of generate class
      *
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSourceFilePath()
     {
@@ -128,6 +131,7 @@ class MakeDefaultActionCommand extends Command
      *
      * @param  string  $path
      * @return string
+     * @author karam mustafa, ali monther
      */
     protected function makeDirectory($path)
     {
@@ -138,13 +142,11 @@ class MakeDefaultActionCommand extends Command
     }
 
 
-
-
-
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {

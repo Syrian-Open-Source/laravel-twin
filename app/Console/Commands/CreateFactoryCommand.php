@@ -47,6 +47,7 @@ class CreateFactoryCommand extends Command
      * Return the Singular Capitalize Name
      * @param $name
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSingularClassName($name)
     {
@@ -56,6 +57,7 @@ class CreateFactoryCommand extends Command
     /**
      * Return the stub file path
      * @return string
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubPath()
@@ -69,6 +71,7 @@ class CreateFactoryCommand extends Command
      * Map the stub variables present in stub to its value
      *
      * @return array
+     * @author karam mustafa, ali monther
      *
      */
     public function getStubVariables()
@@ -85,6 +88,7 @@ class CreateFactoryCommand extends Command
      * Get the stub path and the stub variables
      *
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      *
      */
     public function getSourceFile()
@@ -98,6 +102,7 @@ class CreateFactoryCommand extends Command
      * @param $stub
      * @param array $stubVariables
      * @return bool|mixed|string
+     * @author karam mustafa, ali monther
      */
     public function getStubContents($stub , $stubVariables = [])
     {
@@ -116,11 +121,15 @@ class CreateFactoryCommand extends Command
      * Get the full path of generate class
      *
      * @return string
+     * @author karam mustafa, ali monther
      */
     public function getSourceFilePath()
     {
-        return base_path('Modules\\'.$this->argument('module_name').'\\Actions').'\\'.$this->argument('action_name').'Action\\'
-            .$this->getSingularClassName($this->argument('action_name')) .'Factory.php';
+        return base_path('Modules\\'.$this->argument('module_name').'\\Actions')
+            .'\\'.$this->argument('action_name')
+            .'Action\\'
+            .$this->getSingularClassName($this->argument('action_name'))
+            .'Factory.php';
     }
 
     /**
@@ -128,6 +137,7 @@ class CreateFactoryCommand extends Command
      *
      * @param  string  $path
      * @return string
+     * @author karam mustafa, ali monther
      */
     protected function makeDirectory($path)
     {
@@ -145,6 +155,7 @@ class CreateFactoryCommand extends Command
      * Execute the console command.
      *
      * @return int
+     * @author karam mustafa, ali monther
      */
     public function handle()
     {

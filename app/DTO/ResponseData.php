@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ResponseData extends DataTransferObject implements Responsable
 {
 
-    /**@var string|null*/
+    /**@var string|null */
     public $message;
 
     /** @var int */
@@ -23,8 +23,12 @@ class ResponseData extends DataTransferObject implements Responsable
     public $data;
 
     /**
-     * @param Request $request
+     * format data to return.
+     *
+     * @param  Request  $request
+     *
      * @return JsonResponse|Response
+     * @author karam mustafa, ali monther
      */
     public function toResponse($request)
     {

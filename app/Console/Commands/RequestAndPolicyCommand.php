@@ -41,7 +41,6 @@ class RequestAndPolicyCommand extends Command
         Artisan::call(
             '
                 make:policy'.' '
-
             .$this->argument('request_and_policy_name').' '
             );
 
